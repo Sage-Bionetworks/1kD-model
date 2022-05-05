@@ -1,0 +1,1 @@
+gen-jsonld-context individual.yaml > gen/individual.jsonld
