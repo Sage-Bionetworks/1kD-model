@@ -1,0 +1,106 @@
+id: http://example.org/1kD-model/individual/
+name: Individual
+description: |-
+  This describes an "Individual" within the 1kD Data Model. 
+  
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+prefixes:
+  okd: http://example.org/1kD-model/
+  obo: http://purl.obolibrary.org/obo/
+  pav: http://purl.org/pav/
+  dce: http://purl.org/dc/elements/1.1/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  RO: http://purl.obolibrary.org/obo/RO_
+  BFO: http://purl.obolibrary.org/obo/BFO
+  uo: http://purl.obolibrary.org/obo/uo.owl
+default_prefix: okd
+
+classes:
+
+  Individual:
+    class_uri: obo:NCIT_C25190
+    slots:
+      - individualID
+      - householdID
+      - ethnicity
+      - familyDiagnosis
+      - ageAssessment
+      - birthOrder
+      - feedingBehavior
+      - speechImpairmentSuspected
+      - visionImpairmentSuspected
+      - conceptionByAssistedReproductiveTechnology
+      - estimatedGestationalAge
+      - birthWeight
+
+  Sex:
+    class_uri: obo:NCIT_C28421
+  
+  Ethnicity:
+    class_uri: obo:HANCESTRO_0004
+
+  Diagnosis:
+    class_uri: obo:NCIT_C15220
+
+  # TO DO: Link class URIs for
+  # - FeedingBehavior
+  # - DeliveryProcedure
+  # - EducationLevel
+  # - EmploymentStatus
+  # - etc.
+  
+  Container:
+    attributes:
+      individuals:
+        range: Individual
+        inlined: true
+        inlined_as_list: true
+        multivalued: true
+
+slots: # slots are analogous to attributes (for object-oriented languages) or properties (for RDF)
+  individualID:
+    identifier: true
+    range: integer # assuming integer IDs like SS numbers, but if it's something "syn123", we can change range spec
+    required: true # https://linkml.io/linkml/schemas/slots.html#required
+  householdID:
+    range: integer
+    required: true
+  sex: 
+    range: Sex
+    required: true
+  ethnicity:
+    range: Ethnicity
+    multivalued: true # "1 or many" in spreadsheet
+    recommended: true # https://linkml.io/linkml/schemas/slots.html#recommended
+  familyDiagnosis:
+    range: Diagnosis # which could be Disease or Condition
+    multivalued: true # comorbidity allowed
+    inlined_as_list: true
+    recommended: true # https://linkml.io/linkml/schemas/slots.html#recommended
+  ageAssessment:
+    range: float
+    # required: true # not sure that this should really be required
+  birthOrder:
+    range: integer
+    minimum_value: 1
+  feedingBehavior:
+  speechImpairmentSuspected:
+    range: boolean
+    recommended: true
+  visionImpairmentSuspected:
+    range: boolean
+    recommended: true
+  hearingImpairmentSuspected:
+    recommended: true
+  conceptionByAssistedReproductiveTechnology:
+  estimatedGestationalAge:
+    range: float
+    recommended: true
+  birthWeight:
+    range: float
+    recommended: true
+
