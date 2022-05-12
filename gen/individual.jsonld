@@ -1,1 +1,71 @@
-gen-jsonld-context individual.yaml > gen/individual.jsonld
+{
+   "_comments": "Auto generated from individual.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-05-12T15:02:56\n    Schema: Individual\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://example.org/1kD-model/individual/\n    description: This describes an \"Individual\" within the 1kD Data Model.\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "BFO": {
+         "@id": "http://purl.obolibrary.org/obo/BFO",
+         "@prefix": true
+      },
+      "RO": {
+         "@id": "http://purl.obolibrary.org/obo/RO_",
+         "@prefix": true
+      },
+      "biolink": "https://w3id.org/biolink/",
+      "dce": "http://purl.org/dc/elements/1.1/",
+      "linkml": "https://w3id.org/linkml/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "okd": "http://example.org/1kD-model/",
+      "pav": "http://purl.org/pav/",
+      "uo": {
+         "@id": "http://purl.obolibrary.org/obo/uo.owl",
+         "@prefix": true
+      },
+      "@vocab": "http://example.org/1kD-model/",
+      "ageAssessment": {
+         "@type": "xsd:float"
+      },
+      "birthOrder": {
+         "@type": "xsd:integer"
+      },
+      "birthWeight": {
+         "@type": "xsd:float"
+      },
+      "individuals": {
+         "@type": "@id"
+      },
+      "estimatedGestationalAge": {
+         "@type": "xsd:float"
+      },
+      "ethnicity": {
+         "@type": "@id"
+      },
+      "familyDiagnosis": {
+         "@type": "@id"
+      },
+      "householdID": {
+         "@type": "xsd:integer"
+      },
+      "individualID": "@id",
+      "sex": {
+         "@type": "@id"
+      },
+      "speechImpairmentSuspected": {
+         "@type": "xsd:boolean"
+      },
+      "visionImpairmentSuspected": {
+         "@type": "xsd:boolean"
+      },
+      "Diagnosis": {
+         "@id": "obo:NCIT_C15220"
+      },
+      "Ethnicity": {
+         "@id": "obo:HANCESTRO_0004"
+      },
+      "Individual": {
+         "@id": "obo:NCIT_C25190"
+      },
+      "Sex": {
+         "@id": "obo:NCIT_C28421"
+      }
+   }
+}
+
