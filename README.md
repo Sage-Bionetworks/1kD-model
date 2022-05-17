@@ -9,6 +9,8 @@ Also refer to the `Makefile` for which/how other formats are generated.
 
 Note: Do not edit files in `gen/` directly (they will be overwritten)! 
 
+The schema and background info for this project are in this [Google Drive folder](https://drive.google.com/drive/u/1/folders/1wUyB_KJuYj4nvScDM18ZsKKuumR8TKEh).
+
 ### For Contributors
 
 - Install LinkML following directions at [linkml/install](https://linkml.io/linkml/intro/install.html). 
