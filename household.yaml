@@ -1,0 +1,30 @@
+id: http://example.org/1kD-model/household/
+name: Household
+description: |-
+  This describes a "Household" within the 1kD Data Model. 
+  
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+prefixes:
+  okd: http://example.org/1kD-model/
+  obo: http://purl.obolibrary.org/obo/
+  pav: http://purl.org/pav/
+  dce: http://purl.org/dc/elements/1.1/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  RO: http://purl.obolibrary.org/obo/RO_
+  BFO: http://purl.obolibrary.org/obo/BFO
+  uo: http://purl.obolibrary.org/obo/uo.owl
+default_prefix: okd
+
+classes:
+## TODO: put actual values here
+  Household:
+    class_uri: TBD
+    slots: 
+      - stuff
+      - goes
+      - here
+    
