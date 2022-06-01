@@ -78,7 +78,7 @@ slots: # slots are analogous to attributes (for object-oriented languages) or pr
     range: Ethnicity
     multivalued: true # "1 or many" in spreadsheet
     recommended: true # https://linkml.io/linkml/schemas/slots.html#recommended
-  familyDiagnosis:
+  familyCognitiveDiagnosis:
     range: Diagnosis # which could be Disease or Condition
     multivalued: true # comorbidity allowed
     inlined_as_list: true
