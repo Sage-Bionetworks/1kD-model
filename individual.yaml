@@ -107,6 +107,7 @@ slots: # slots are analogous to attributes (for object-oriented languages) or pr
     recommended: true
   deliveryProcedure:
     range: DeliveryProcedure
+    recommended: true
   deliveryLocation:
     range: string
 
