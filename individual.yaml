@@ -36,6 +36,7 @@ classes:
       - conceptionByAssistedReproductiveTechnology
       - estimatedGestationalAge
       - birthWeight
+      - deliveryLocation
 
   Sex:
     class_uri: obo:NCIT_C28421
@@ -46,9 +47,10 @@ classes:
   Diagnosis:
     class_uri: obo:NCIT_C15220
 
+  DeliveryProcedure:
+    class_uri: obo:NCIT_C81179
   # TO DO: Link class URIs for
   # - FeedingBehavior
-  # - DeliveryProcedure
   # - EducationLevel
   # - EmploymentStatus
   # - etc.
@@ -103,4 +105,9 @@ slots: # slots are analogous to attributes (for object-oriented languages) or pr
   birthWeight:
     range: float
     recommended: true
+  deliveryProcedure:
+    range: DeliveryProcedure
+  deliveryLocation:
+    range: string
+
 
