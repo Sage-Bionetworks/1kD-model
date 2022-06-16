@@ -37,6 +37,7 @@ classes:
       - estimatedGestationalAge
       - birthWeight
       - deliveryLocation
+      - educationLevel
 
   Sex:
     class_uri: obo:NCIT_C28421
@@ -54,6 +55,9 @@ classes:
   # - EducationLevel
   # - EmploymentStatus
   # - etc.
+  
+  EducationLevel: 
+    class_uri: obo:NCIT_C17953
   
   Container:
     attributes:
@@ -110,5 +114,7 @@ slots: # slots are analogous to attributes (for object-oriented languages) or pr
     recommended: true
   deliveryLocation:
     range: string
-
+  educationLevel:
+    range: EducationLevel
+    required: true
 
